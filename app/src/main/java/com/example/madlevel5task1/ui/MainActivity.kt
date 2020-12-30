@@ -1,7 +1,8 @@
-package com.example.madlevel5task1
+package com.example.madlevel5task1.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.madlevel5task1.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
