@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.RemindersFragment">
+    tools:context=".ui.NotepadFragment">
 
     <TextView
-        android:id="@+id/tvOverviewTitle"
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -18,23 +18,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvOverviewLastUpdated"
+        android:id="@+id/tvLastUpdated"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="@string/overview_last_updated"
-        android:textSize="14sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOverviewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvNotes"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="16dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOverviewLastUpdated" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLastUpdated">
+
+        <TextView
+            android:id="@+id/tvNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvNoteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="24sp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
