@@ -7,12 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.madlevel5task1.R
 import com.example.madlevel5task1.model.NoteViewModel
 import kotlinx.android.synthetic.main.fragment_notes.*
 
 class NotepadFragment : Fragment() {
 
+    private lateinit var navController: NavController
     private val viewModel: NoteViewModel by viewModels()
 
     override fun onCreateView(
@@ -25,6 +29,12 @@ class NotepadFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        navController = findNavController()
+
+        fabEdit.setOnClickListener {
+            navController.navigate(R.id.action_notepadFragment_to_addNoteFragment)
+        }
 
         observeAddNoteResult()
     }

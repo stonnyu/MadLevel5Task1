@@ -10,6 +10,7 @@
         android:id="@+id/tilTitle"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:hint="@string/note_title"
         android:padding="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,13 +19,14 @@
             android:id="@+id/etNoteTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilInfo"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:hint="@string/note_text"
         android:padding="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilTitle">
@@ -33,11 +35,12 @@
             android:id="@+id/etNoteInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp" />
+            android:inputType="textMultiLine"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnAddNote"
+        android:id="@+id/btnSaveNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"

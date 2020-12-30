@@ -5,5 +5,5 @@
     <string name="overview_last_updated">Last updated: %s</string>
     <string name="note_title">Title</string>
     <string name="note_text">Text</string>
-    <string name="add_note">Add</string>
+    <string name="add_note">Save</string>
 </resources>

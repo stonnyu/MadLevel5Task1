@@ -7,6 +7,7 @@ import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.example.madlevel5task1.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
